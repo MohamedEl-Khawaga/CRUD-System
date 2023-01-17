@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Style/all.min.css">
+    <link rel="stylesheet" href="./Style/bootstrap.min.css">
+    <link rel="stylesheet" href="./Style/Style.css">
+</head>
+<body>
+
+    
+    <div class="w-75 mx-auto pt-5  " >
+        <h2 class="text-center text-capitalize " ><span class="text-uppercase" >crud</span> system operation</h2>
+        <label for="productNameInput" class="fw-bold" >Product Name :</label>
+        <input id="productNameInput" oninput=" " type="text" class="form-control mb-3  ">
+
+        <label for="productPriceInput" class="fw-bold" >Product Price :</label>
+        <input id="productPriceInput" type="number" class="form-control mb-3">
+
+        <label for="productCategoryInput" class="fw-bold" >Product Category :</label>
+        <input id="productCategoryInput" class="form-control mb-3">
+
+        <label for="productDescriptionInput"  class="fw-bold" >Product Description :</label>
+        <textarea class="form-control" id="productDescriptionInput" ></textarea>
+
+        <button class="btn btn-outline-info text-capitalize mt-3 fw-bold" id="addProduct" > add product </button>
+        <button class="btn btn-outline-info text-capitalize mt-3 fw-bold d-none  " id="updateProduct" > update </button>
+        <button class="btn btn-outline-danger text-capitalize mt-3 fw-bold" id="clearForm" > Clear Form </button>
+    </div>
+
+    <div class="mx-auto p-5 w-75" >
+        <h4 class="text-capitalize" >search</h4>
+        <input id="searchProduct" oninput="searchProduct(this.value)" type="search" class="form-control" placeholder="search by name " ></input>
+    </div>
+    
+
+    <table class="table w-75 mx-auto  " >
+        <thead>
+            <th>Index</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Category</th>
+            <th>Product Description</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+        <tbody id="tableBody" >
+            
+        </tbody>
+    </table>
+
+
+    <script src="./JS/main.JS" ></script>
+</body>
+</html>
